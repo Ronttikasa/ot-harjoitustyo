@@ -1,0 +1,225 @@
+commit 8d68ca9aff4636439bd6a16eda22eceb087b67b6
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 17:45:20 2021 +0200
+
+    muutoksia
+
+ tiedostoja/file2.txt             | 0
+ tiedostoja/{file1.txt => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit b631bedecbd5205e23b6ca96e0b7765076c857bc
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 17:37:02 2021 +0200
+
+    uudet tiedostot file1, file2, file3
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit d7e9238305c6dae70a20055c6ab5c8d19f5709e3
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 17:28:49 2021 +0200
+
+    lisää muutoksia
+
+ eka.txt    | 9 ++++-----
+ kolmas.txt | 4 +++-
+ 2 files changed, 7 insertions(+), 6 deletions(-)
+
+commit 28164c0112f2a51dbf3659f3012deb97937cfb99
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 17:23:50 2021 +0200
+
+    uudelleennimetty tiedosto.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 85e678e652be5599866e06059d5719510446fbb8
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 17:22:56 2021 +0200
+
+    poistettu toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit a7f00892326c93a9ddf7d811cd8b613bf64f56d5
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 17:20:23 2021 +0200
+
+    muutos tiedosto.txt
+
+ tiedosto.txt | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+commit 595353df97bf2fe9881c27a5544ce59622c9c9d7
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 17:16:54 2021 +0200
+
+    lisätty yuzuru ekaan tiedostoon
+
+ tiedosto.txt | 297 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 297 insertions(+)
+
+commit 5543ec75a0f373b8f5d0c3033d8991b05d645939
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 16:43:22 2021 +0200
+
+    lisätty stuff
+
+ stuff/stuff.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit c27ed3601200ba3b83976b4b4e5c38d7005c703c
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 16:41:17 2021 +0200
+
+    muutokset toiseen ja kolmanteen
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 3142a6631bbdd9e53711e0dfb27112743cba3b3c
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 16:38:49 2021 +0200
+
+    lisätään kolmas tiedosto
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit f7eaa6d4c51c6ee20f750f75c5b10b82ff4fd3c7
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 16:36:13 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 99e6b055c06b0358f83e91ff89e8ac445db8655f
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 16:33:25 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)commit 8d68ca9aff4636439bd6a16eda22eceb087b67b6
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 17:45:20 2021 +0200
+
+    muutoksia
+
+ tiedostoja/file2.txt             | 0
+ tiedostoja/{file1.txt => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit b631bedecbd5205e23b6ca96e0b7765076c857bc
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 17:37:02 2021 +0200
+
+    uudet tiedostot file1, file2, file3
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit d7e9238305c6dae70a20055c6ab5c8d19f5709e3
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 17:28:49 2021 +0200
+
+    lisää muutoksia
+
+ eka.txt    | 9 ++++-----
+ kolmas.txt | 4 +++-
+ 2 files changed, 7 insertions(+), 6 deletions(-)
+
+commit 28164c0112f2a51dbf3659f3012deb97937cfb99
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 17:23:50 2021 +0200
+
+    uudelleennimetty tiedosto.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 85e678e652be5599866e06059d5719510446fbb8
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 17:22:56 2021 +0200
+
+    poistettu toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit a7f00892326c93a9ddf7d811cd8b613bf64f56d5
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 17:20:23 2021 +0200
+
+    muutos tiedosto.txt
+
+ tiedosto.txt | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+commit 595353df97bf2fe9881c27a5544ce59622c9c9d7
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 17:16:54 2021 +0200
+
+    lisätty yuzuru ekaan tiedostoon
+
+ tiedosto.txt | 297 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 297 insertions(+)
+
+commit 5543ec75a0f373b8f5d0c3033d8991b05d645939
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 16:43:22 2021 +0200
+
+    lisätty stuff
+
+ stuff/stuff.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit c27ed3601200ba3b83976b4b4e5c38d7005c703c
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 16:41:17 2021 +0200
+
+    muutokset toiseen ja kolmanteen
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 3142a6631bbdd9e53711e0dfb27112743cba3b3c
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 16:38:49 2021 +0200
+
+    lisätään kolmas tiedosto
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit f7eaa6d4c51c6ee20f750f75c5b10b82ff4fd3c7
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 16:36:13 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 99e6b055c06b0358f83e91ff89e8ac445db8655f
+Author: Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>
+Date:   Mon Nov 1 16:33:25 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
