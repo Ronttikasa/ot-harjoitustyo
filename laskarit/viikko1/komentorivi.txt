@@ -12,5 +12,3 @@ kurssit
                     ├── init.py
                     └── maksukortti_test.py
 
-
-testataan repojen sotkemista
