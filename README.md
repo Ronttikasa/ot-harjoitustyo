@@ -1,5 +1,7 @@
 # Ohjelmistotekniikan harjoitustyö
-### Tehtävät
-#### Viikko 1
+## Tehtävät
+### Viikko 1
 
-Tavallista tekstiä joka sisältää **lihavoituja** ja *kursivoituja* osuuksia
+[komentorivi.txt](https://github.com/Ronttikasa/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+
+[gitlog.txt](https://github.com/Ronttikasa/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
