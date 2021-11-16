@@ -13,3 +13,8 @@
 [kassapaate_test.py](https://github.com/Ronttikasa/ot-harjoitustyo/blob/master/laskarit/viikko2/unicafe/src/tests/kassapaate_test.py)
 
 [kattavuusraportti](https://github.com/Ronttikasa/ot-harjoitustyo/blob/master/laskarit/viikko2/kattavuusraportti.JPG)
+
+## Harjoitustyö
+### Dokumentaatio
+
+[Vaatimusmäärittely](https://github.com/Ronttikasa/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
