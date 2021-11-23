@@ -8,3 +8,6 @@
 /src/ui/__pycache__/
 /trainingjournal.txt
 /src/tests/__pycache__/
+
+/.coverage
+/htmlcov
