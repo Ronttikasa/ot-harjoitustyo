@@ -7,11 +7,15 @@ class PracticeRepository:
         self._write(practice)
 
     def get_all(self):
-        self._read()
+        return(self._read())
+
+    def delete_all(self):
+        with open("trainingjournal.txt", "w") as file:
+            file.write("")
 
     def _write(self, practice):
         with open("trainingjournal.txt", "a") as file:
-            file.write(practice)
+            file.write(f"{practice}\n")
 
     def _read(self):
         practices = []

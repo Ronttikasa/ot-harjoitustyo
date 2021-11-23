@@ -7,7 +7,7 @@ class UI:
     def __init__(self, practice_repo = default_practice_repo):
         self._practice_repo = practice_repo
 
-    # tästä pitää eriyttää sovelluslogiikka irti
+    # tästä pitää säätää vielä
     def use(self):
         print("Welcome to your training journal!")
         while True:
@@ -28,8 +28,7 @@ class UI:
                 self._practice_repo.create(practice)
 
             elif cmd == "2":
-                # todo
-                print("not today")
+                print(self._practice_repo.get_all())
 
             elif cmd == "q":
                 break
