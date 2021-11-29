@@ -6,9 +6,8 @@ Sovelluksen avulla taitoluistelun harrastaja voi pitää treenipäiväkirjaa.
 
 ### Perusversion toiminnallisuus
 
-- [ ] käyttäjä voi luoda uuden treenimerkinnän
--- [x] kellonaika, treenin sisältö/kommentteja, 
--- [ ] treenin onnistuminen esim asteikolla :( - :)
+- [x] käyttäjä voi luoda uuden treenimerkinnän, perustiedot kellonaika, treenin sisältö/kommentteja 
+- [ ] treenimerkinnässä tietona treenin onnistuminen esim asteikolla :( - :)
 - [ ] käyttäjä voi tarkastella aikaisempia merkintöjä
 - [ ] käyttäjä voi poistaa treenin
 
