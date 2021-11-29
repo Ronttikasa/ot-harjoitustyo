@@ -1,18 +1,18 @@
 # Ohjelmistotekniikan harjoitustyö
 
-### Dokumentaatio
+## Dokumentaatio
 
 [Vaatimusmäärittely](https://github.com/Ronttikasa/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 [Työaikakirjanpito](https://github.com/Ronttikasa/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
-### Asennus
+## Asennus
 
 Asenna riippuvuudet komennolla
 
 `poetry install`
 
-### Komentorivitoiminnot
+## Komentorivitoiminnot
 
 #### Ohjelman suorittaminen
 
