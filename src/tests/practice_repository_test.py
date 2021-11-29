@@ -1,6 +1,7 @@
 import unittest
 from repositories.practice_repository import practice_repository
 
+
 class TestPracticeRepository(unittest.TestCase):
     def setUp(self):
         practice_repository.delete_all()

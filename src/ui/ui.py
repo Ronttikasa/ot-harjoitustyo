@@ -2,9 +2,10 @@ from repositories.practice_repository import (
     practice_repository as default_practice_repo
 )
 
+
 class UI:
 
-    def __init__(self, practice_repo = default_practice_repo):
+    def __init__(self, practice_repo=default_practice_repo):
         self._practice_repo = practice_repo
 
     # tästä pitää säätää vielä

@@ -8,3 +8,4 @@
 | | 1 | ensimmäinen versio käyttöliittymästä ja tiedostoon kirjoittamisesta |
 | 23.11. | 2 | ensimmäinen testi ja coverage käyttöön |
 | | 1 | ohjelman toiminnan testaaminen melkillä |
+| 30.11. | 1 | pylint käyttöönotto, dokumentaation päivitystä, ohjelman laajennusta |
