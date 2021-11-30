@@ -6,8 +6,11 @@
 
 /src/repositories/__pycache__/
 /src/ui/__pycache__/
-/trainingjournal.txt
+/src/entities/__pycache__/
 /src/tests/__pycache__/
+/src/services/__pycache__/
+
+/trainingjournal.txt
 
 /.coverage
 /htmlcov
