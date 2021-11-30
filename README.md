@@ -16,7 +16,7 @@ Asenna riippuvuudet komennolla
 
 #### Ohjelman suorittaminen
 
-Ensimmäinen käyttökerta viikolla 4: Jos juurihakemistossa on trainingjournal.txt-tiedosto, poista se.
+Ensimmäinen käyttökerta viikolla 4: Jos juurihakemistossa on tiedosto trainingjournal.txt, poista se.
 
 Suorita ohjelma komennolla
 
