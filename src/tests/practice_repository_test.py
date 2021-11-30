@@ -44,7 +44,3 @@ class TestPracticeRepository(unittest.TestCase):
 
         self.assertEqual(len(practices), 1)
         self.assertEqual(practices[0].date, self.entry_b.date)
-
-
-
-

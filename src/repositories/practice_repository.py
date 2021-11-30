@@ -1,5 +1,6 @@
 from entities.practice import Practice
 
+
 class PracticeRepository:
 
     def __init__(self):
@@ -15,7 +16,7 @@ class PracticeRepository:
         index = 1
         for entry in self.list_all():
             print(index, entry)
-            index +=1
+            index += 1
 
     def delete_all(self):
         with open("trainingjournal.txt", "w") as file:
@@ -26,7 +27,6 @@ class PracticeRepository:
         entries = [entry for entry in entries if entry.id != tbd_id]
         self.delete_all()
         self._write(entries)
-
 
     def _write(self, entries):
         with open("trainingjournal.txt", "a") as file:
@@ -49,8 +49,10 @@ class PracticeRepository:
                 end = parts[3]
                 notes = parts[4]
 
-                entries.append(Practice(date, start, end, notes, None, prac_id))
+                entries.append(
+                    Practice(date, start, end, notes, None, prac_id))
 
         return entries
+
 
 practice_repository = PracticeRepository()

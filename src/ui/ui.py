@@ -1,5 +1,6 @@
 from services.entry_service import EntryService
 
+
 class UI:
 
     def __init__(self):

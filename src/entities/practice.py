@@ -1,5 +1,6 @@
 import uuid
 
+
 class Practice:
     def __init__(self, date, start, end, notes=None, review=None, entry_id=None):
         self.date = date

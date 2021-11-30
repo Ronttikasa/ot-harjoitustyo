@@ -3,6 +3,7 @@ from repositories.practice_repository import (
 )
 from entities.practice import Practice
 
+
 class EntryService:
     def __init__(self, practice_repo=default_practice_repo):
         self._practice_repo = practice_repo
@@ -26,4 +27,3 @@ class EntryService:
         delete_index = int(input("Entry number to delete: ")) - 1
         delete_id = entries[delete_index].id
         self._practice_repo.delete_entry(delete_id)
-        
