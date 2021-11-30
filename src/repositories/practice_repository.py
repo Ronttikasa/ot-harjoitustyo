@@ -49,7 +49,7 @@ class PracticeRepository:
                 end = parts[3]
                 notes = parts[4]
 
-                entries.append(Practice(date,start,end,notes,None,prac_id))
+                entries.append(Practice(date, start, end, notes, None, prac_id))
 
         return entries
 
