@@ -6,6 +6,8 @@
 
 [Työaikakirjanpito](https://github.com/Ronttikasa/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
+[Arkkitehtuuri](./dokumentaatio/arkkitehtuuri.md)
+
 ## Asennus
 
 Asenna riippuvuudet komennolla
