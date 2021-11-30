@@ -11,5 +11,5 @@
 | 29.11. | 1 | pylint käyttöönotto, dokumentaation päivitystä, ohjelman laajennusta |
 | 30.11. | 3 | ohjelman laajennus -> merkinnän poistaminen |
 | | 1 | testien laajentaminen |
-| | 1 | testaaminen melkillä |
+| | 1 | testaaminen melkillä, luokkakaavio |
 | yht | 12 | |
