@@ -12,6 +12,10 @@ Asenna riippuvuudet komennolla
 
 `poetry install`
 
+Suorita ohjelma komennolla
+
+`poetry run invoke start`
+
 ## Komentorivitoiminnot
 
 #### Ohjelman suorittaminen
