@@ -58,6 +58,7 @@ class UI:
             elif cmd == "2":
                 self._goal_service.list_all()
             elif cmd == "3":
+                print("Awesome, you reached a goal!")
                 self._goal_service.mark_done()
             elif cmd == "q":
                 break

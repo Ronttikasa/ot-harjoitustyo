@@ -19,7 +19,6 @@ class GoalService:
         self._goal_repo.list_all_with_number()
 
     def mark_done(self):
-        print("Awesome, you reached a goal!")
         all_goals = self._goal_repo.list_all()
         self._goal_repo.list_all_with_number()
         done_index = int(input("Which goal was it: ")) - 1
