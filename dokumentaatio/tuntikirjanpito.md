@@ -12,4 +12,5 @@
 | 30.11. | 3 | ohjelman laajennus -> merkinnän poistaminen |
 | | 1 | testien laajentaminen |
 | | 1 | testaaminen melkillä, luokkakaavio |
-| yht | 12 | |
+| 5.12. | 1 | tkinteriin tutustuminen |
+| yht | 13 | |

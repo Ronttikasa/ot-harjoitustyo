@@ -6,20 +6,18 @@ class PracticeRepository:
     def __init__(self):
         pass
 
-    def create(self, entry):
+    def create(self, entry: Practice):
         self._write([entry])
 
     def list_all(self):
         return self._read()
 
     def list_all_with_number(self):
-        index = 1
-        for entry in self.list_all():
-            print(index, entry)
-            index += 1
+        for index, entry in enumerate(self.list_all()):
+            print(index+1, entry)
 
     def delete_all(self):
-        with open("trainingjournal.txt", "w") as file:
+        with open("trainingjournal.txt", "w", encoding="utf-8") as file:
             file.write("")
 
     def delete_entry(self, tbd_id):
@@ -28,15 +26,15 @@ class PracticeRepository:
         self.delete_all()
         self._write(entries)
 
-    def _write(self, entries):
-        with open("trainingjournal.txt", "a") as file:
+    def _write(self, entries: list):
+        with open("trainingjournal.txt", "a", encoding="utf-8") as file:
             for entry in entries:
                 row = f"{entry.id};{entry.date};{entry.start};{entry.end};{entry.notes}"
                 file.write(f"{row}\n")
 
     def _read(self):
         entries = []
-        with open("trainingjournal.txt") as file:
+        with open("trainingjournal.txt", encoding="utf-8") as file:
             for row in file:
                 row = row.replace("\n", "")
                 if row == "":

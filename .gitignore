@@ -11,6 +11,7 @@
 /src/services/__pycache__/
 
 /trainingjournal.txt
+/training-goals.txt
 
 /.coverage
 /htmlcov
