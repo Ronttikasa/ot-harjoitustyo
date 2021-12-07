@@ -15,4 +15,5 @@
 | 5.12. | 1 | tkinteriin tutustuminen |
 | 6.12. | 2 | goals-toiminnon implementointi |
 | 7.12. | 1 | testien laajentaminen |
-| yht | 16 | |
+| | 2 | testaaminen etätyöpöydällä, github-release, sekvenssikaavio |
+| yht | 18 | |
