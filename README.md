@@ -1,4 +1,6 @@
-# Ohjelmistotekniikan harjoitustyö
+# Treenipäiväkirja
+
+Sovellus toimii treenipäiväkirjana urheilun harrastajalle. Nykyisessä muodossaan treenipäiväkirja sopii kenelle tahansa liikunnan harrastajalle, mutta jatkokehityksessä kohdekäyttäjiä ovat taitoluistelun harrastajat.
 
 ## Dokumentaatio
 
@@ -7,6 +9,10 @@
 [Työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)
 
 [Arkkitehtuuri](./dokumentaatio/arkkitehtuuri.md)
+
+## Release viikko 5
+
+tähän linkki
 
 ## Asennus
 
