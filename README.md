@@ -24,11 +24,11 @@ Suorita ohjelma komennolla
 
 `poetry run invoke start`
 
+Huom. ohjelma tallentaa tietoa tiedostoihin jotka luodaan siinä vaiheessa kun ensimmäiset treeni- ja tavoitemerkinnät tehdään. Tällä hetkellä ohjelma kaatuu jos merkintöjä yrittää tarkastella ennen kuin niitä on tehty.
+
 ## Komentorivitoiminnot
 
 #### Ohjelman suorittaminen
-
-Ensimmäinen käyttökerta viikolla 4: Jos juurihakemistossa on tiedosto trainingjournal.txt, poista se.
 
 Suorita ohjelma komennolla
 
