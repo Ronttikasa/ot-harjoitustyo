@@ -12,7 +12,7 @@ Sovellus toimii treenipäiväkirjana urheilun harrastajalle. Nykyisessä muodoss
 
 ## Release viikko 5
 
-tähän linkki
+[Github-release](https://github.com/Ronttikasa/treenipaivakirja/releases)
 
 ## Asennus
 
