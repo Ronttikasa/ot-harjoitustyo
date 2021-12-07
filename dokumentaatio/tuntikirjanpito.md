@@ -14,4 +14,5 @@
 | | 1 | testaaminen melkillä, luokkakaavio |
 | 5.12. | 1 | tkinteriin tutustuminen |
 | 6.12. | 2 | goals-toiminnon implementointi |
-| yht | 13 | |
+| 7.12. | 1 | testien laajentaminen |
+| yht | 16 | |

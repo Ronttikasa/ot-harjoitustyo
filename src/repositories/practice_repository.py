@@ -1,5 +1,8 @@
 from entities.practice import Practice
 
+# luokka tallentaa tietoa toistaiseksi kovakoodattuun tiedostoon trainingjournal.txt,
+# tämä on tarkoitus muuttaa myöhemmin
+
 
 class PracticeRepository:
 

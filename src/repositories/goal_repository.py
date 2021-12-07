@@ -1,5 +1,8 @@
 from entities.goal import Goal
 
+# luokka tallentaa tietoa toistaiseksi kovakoodattuun tiedostoon training-goals.txt,
+# tämä on tarkoitus muuttaa myöhemmin
+
 
 class GoalRepository:
 

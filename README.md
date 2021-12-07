@@ -2,9 +2,9 @@
 
 ## Dokumentaatio
 
-[Vaatimusmäärittely](https://github.com/Ronttikasa/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[Vaatimusmäärittely](.dokumentaatio/vaatimusmaarittely.md)
 
-[Työaikakirjanpito](https://github.com/Ronttikasa/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+[Työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)
 
 [Arkkitehtuuri](./dokumentaatio/arkkitehtuuri.md)
 
