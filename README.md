@@ -24,7 +24,7 @@ Suorita ohjelma komennolla
 
 `poetry run invoke start`
 
-Huom. ohjelma tallentaa tietoa tiedostoihin jotka luodaan siinä vaiheessa kun ensimmäiset treeni- ja tavoitemerkinnät tehdään. Tällä hetkellä ohjelma kaatuu jos merkintöjä yrittää tarkastella ennen kuin niitä on tehty.
+Huom. ohjelma tallentaa tietoa tiedostoihin jotka luodaan siinä vaiheessa kun ensimmäiset treeni- ja tavoitemerkinnät tehdään. Tällä hetkellä ohjelma kaatuu jos merkintöjä yrittää tarkastella ennen kuin niitä on tehty. Aloita siis luomalla merkintöjä!
 
 ## Komentorivitoiminnot
 
