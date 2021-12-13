@@ -16,4 +16,5 @@
 | 6.12. | 2 | goals-toiminnon implementointi |
 | 7.12. | 1 | testien laajentaminen |
 | | 2 | testaaminen etätyöpöydällä, github-release, sekvenssikaavio |
-| yht | 18 | |
+| 13.12. | 1,5 | docstringejä |
+| yht | 19,5 | |
