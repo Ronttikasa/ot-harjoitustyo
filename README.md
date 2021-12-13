@@ -4,7 +4,7 @@ Sovellus toimii treenipäiväkirjana urheilun harrastajalle. Nykyisessä muodoss
 
 ## Dokumentaatio
 
-[Vaatimusmäärittely](.dokumentaatio/vaatimusmaarittely.md)
+[Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
 
 [Työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)
 
