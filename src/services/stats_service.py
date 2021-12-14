@@ -1,9 +1,8 @@
+from statistics import mean
 from repositories.practice_repository import (
-    PracticeRepository,
     practice_repository as default_repo
 )
-from entities.practice import Practice
-from statistics import mean
+
 
 class StatsService:
     """Class responsible for the statistics

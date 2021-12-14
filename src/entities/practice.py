@@ -1,5 +1,5 @@
 import uuid
-from datetime import datetime, timedelta
+from datetime import datetime
 
 
 class Practice:
@@ -45,8 +45,7 @@ class Practice:
             float: Practice duration in hours
         """
 
-        format = "%H:%M"
-        tdelta = datetime.strptime(self.end, format) - datetime.strptime(self.start, format)
-        return (tdelta.seconds / 3600)
-
-
+        fmt = "%H:%M"
+        tdelta = datetime.strptime(self.end, fmt) - \
+            datetime.strptime(self.start, fmt)
+        return tdelta.seconds / 3600

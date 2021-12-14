@@ -18,4 +18,5 @@
 | | 2 | testaaminen etätyöpöydällä, github-release, sekvenssikaavio |
 | 13.12. | 1,5 | docstringejä |
 | 14.12. | 2 | tilastotoiminnon rakentamista |
-| yht | 21,5 | |
+| | 1 | alustava käyttöohje |
+| yht | 22,5 | |

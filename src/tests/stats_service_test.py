@@ -2,6 +2,7 @@ import unittest
 from services.stats_service import StatsService
 from entities.practice import Practice
 
+
 class FakePracticeRepository:
     def __init__(self):
         self.entries = []
@@ -32,4 +33,3 @@ class TestStatsService(unittest.TestCase):
 
     def test_correct_total_hours(self):
         self.assertEqual(self.stats_service.total_hours(), 4.33)
-

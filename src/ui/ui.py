@@ -73,6 +73,7 @@ class UI:
     def stats_ui(self):
         while True:
             print("Statistics")
-            print(f"Average training session: {self._stats_service.average_duration()} hours")
+            print(
+                f"Average training session: {self._stats_service.average_duration()} hours")
             print(f"{self._stats_service.total_hours()} hours in total")
             break
