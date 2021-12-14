@@ -6,7 +6,7 @@ Lataa projektin tuoreimman [releasen](https://github.com/Ronttikasa/treenipaivak
 
 Sovellus käynnistyy päävalikkonäkymään:
 
-(kuva)
+![päävalikko](./kuvat/main_menu.jpg)
 
 Komennolla 1 siirrytään treenipäiväkirjaan, komennolla 2 tavoitelistaukseen, komennolla 3 harjoitustilastoihin. Komento q lopettaa ohjelman.
 
