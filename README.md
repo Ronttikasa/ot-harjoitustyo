@@ -10,6 +10,8 @@ Sovellus toimii treenipäiväkirjana urheilun harrastajalle. Nykyisessä muodoss
 
 [Arkkitehtuuri](./dokumentaatio/arkkitehtuuri.md)
 
+[Käyttöohje](./dokumentaatio/kayttoohje.md)
+
 ## Release viikko 5
 
 [Github-release](https://github.com/Ronttikasa/treenipaivakirja/releases)
