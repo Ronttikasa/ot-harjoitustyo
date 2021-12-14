@@ -24,11 +24,6 @@ class Goal:
         self.id = goal_id or str(uuid.uuid4())
 
     def __str__(self):
-        """Represents the goal object as string.
-
-        Returns:
-            str: Goal content with a checkbox showing if the goal is reached.
-        """
         if self.reached:
             return f"[x] {self.content}"
         return f"[ ] {self.content}"
