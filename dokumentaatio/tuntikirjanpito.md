@@ -17,4 +17,5 @@
 | 7.12. | 1 | testien laajentaminen |
 | | 2 | testaaminen etätyöpöydällä, github-release, sekvenssikaavio |
 | 13.12. | 1,5 | docstringejä |
-| yht | 19,5 | |
+| 14.12. | 2 | tilastotoiminnon rakentamista |
+| yht | 21,5 | |

@@ -1,4 +1,5 @@
 import uuid
+from datetime import datetime, timedelta
 
 
 class Practice:
@@ -29,4 +30,23 @@ class Practice:
         self.id = entry_id or str(uuid.uuid4())
 
     def __str__(self):
+        """String method
+
+        Returns:
+            A string in format "<date>, from <start-time> to <end-time>. Notes: <>".
+        """
+
         return f"{self.date}, from {self.start} to {self.end}. Notes: {self.notes}"
+
+    def length(self):
+        """Duration of a practice session
+
+        Returns:
+            float: Practice duration in hours
+        """
+
+        format = "%H:%M"
+        tdelta = datetime.strptime(self.end, format) - datetime.strptime(self.start, format)
+        return (tdelta.seconds / 3600)
+
+
