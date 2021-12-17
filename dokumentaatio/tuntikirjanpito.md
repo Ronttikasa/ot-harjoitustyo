@@ -19,4 +19,6 @@
 | 13.12. | 1,5 | docstringejä |
 | 14.12. | 2 | tilastotoiminnon rakentamista |
 | | 1 | alustava käyttöohje |
-| yht | 22,5 | |
+| 15.12. | 1,5 | gui |
+| 16.12. | 4 | gui |
+| yht | 28 | |

@@ -61,7 +61,7 @@ class UI:
             if cmd == "1":
                 self._goal_service.add_goal()
             elif cmd == "2":
-                self._goal_service.list_all()
+                self._goal_service.list_all_unreached()
             elif cmd == "3":
                 print("Awesome, you reached a goal!")
                 self._goal_service.mark_done()
