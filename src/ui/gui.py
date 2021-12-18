@@ -1,5 +1,5 @@
 from tkinter import Tk
-
+from ui.journal_view import JournalView
 from ui.main_view import MainView
 from ui.goals_view import GoalsView
 
@@ -30,7 +30,14 @@ class GUI:
         self._current_view.pack()
 
     def _show_journal_view(self):
-        pass
+        self._hide_current_view()
+
+        self._current_view = JournalView(
+            self._root,
+            self._show_main_view
+        )
+
+        self._current_view.pack()
 
     def _show_goals_view(self):
         self._hide_current_view()

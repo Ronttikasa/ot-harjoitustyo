@@ -27,3 +27,5 @@ class EntryService:
         delete_index = int(input("Entry number to delete: ")) - 1
         delete_id = entries[delete_index].id
         self._practice_repo.delete_entry(delete_id)
+
+entry_service = EntryService()

@@ -137,5 +137,5 @@ class GoalsView:
         )
 
         self._frame.grid_columnconfigure(0, weight=1, minsize=400)
-        self._frame.grid_columnconfigure(1, weight=0)
+        self._frame.grid_columnconfigure(1, weight=0, minsize=100)
 

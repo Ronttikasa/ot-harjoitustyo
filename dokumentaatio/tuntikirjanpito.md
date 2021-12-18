@@ -21,4 +21,5 @@
 | | 1 | alustava käyttöohje |
 | 15.12. | 1,5 | gui |
 | 16.12. | 4 | gui |
-| yht | 28 | |
+| 17.12. | 2 | gui
+| yht | 30 | |
