@@ -17,7 +17,7 @@ class Practice:
         """Class constructor, creates a new practice.
 
         Args:
-            date (str): Practice date (ddmmyy)
+            date (datetime.date): Practice date
             start (str): Start time (hh:mm)
             end (str): End time (hh:mm)
             notes (str, optional): Notes about the practice session. Defaults to "".
@@ -30,12 +30,6 @@ class Practice:
         self.id = entry_id or str(uuid.uuid4())
 
     def __str__(self):
-        """String method
-
-        Returns:
-            A string in format "<date>, from <start-time> to <end-time>. Notes: <>".
-        """
-
         return f"{self.date}, from {self.start} to {self.end}. Notes: {self.notes}"
 
     def length(self):
