@@ -2,6 +2,7 @@ from tkinter import ttk, constants
 
 from services.goal_service import goal_service
 
+
 class GoalsListView:
     def __init__(self, root, goals, handle_set_goal_reached):
         self._root = root
@@ -29,9 +30,9 @@ class GoalsListView:
 
         label.grid(
             row=0, column=0, padx=5, pady=5, sticky=constants.EW
-            )
+        )
         set_goal_reached_button.grid(
-            row=0, column=1, padx=5, pady=5,sticky=constants.EW
+            row=0, column=1, padx=5, pady=5, sticky=constants.EW
         )
 
         goal_frame.grid_columnconfigure(0, weight=1, minsize=400)
@@ -64,7 +65,6 @@ class GoalsView:
     def _handle_set_goal_reached(self, goal_id):
         goal_service.mark_done(goal_id)
         self._initialize_goal_list()
-        
 
     def _initialize_goal_list(self):
         if self._goals_list_view:
@@ -81,17 +81,18 @@ class GoalsView:
         self._goals_list_view.pack()
 
     def _initialize_header(self):
-        header_label = ttk.Label(master=self._frame, text="Your figure skating goals")
+        header_label = ttk.Label(
+            master=self._frame, text="Your figure skating goals")
 
         header_back_button = ttk.Button(
-            master=self._frame, 
+            master=self._frame,
             text="Main menu ->",
             command=self._handle_main
         )
 
         header_label.grid(
             row=0, column=0, padx=5, pady=10
-            )
+        )
 
         header_back_button.grid(
             row=0, column=1, padx=5, pady=10, sticky=constants.EW
@@ -138,4 +139,3 @@ class GoalsView:
 
         self._frame.grid_columnconfigure(0, weight=1, minsize=400)
         self._frame.grid_columnconfigure(1, weight=0, minsize=100)
-

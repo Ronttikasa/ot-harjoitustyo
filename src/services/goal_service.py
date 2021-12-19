@@ -45,4 +45,5 @@ class GoalService:
     def mark_done(self, goal_id):
         return self._goal_repo.mark_done(goal_id)
 
+
 goal_service = GoalService()

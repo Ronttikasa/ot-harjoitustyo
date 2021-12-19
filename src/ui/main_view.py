@@ -1,5 +1,6 @@
 from tkinter import ttk, constants
 
+
 class MainView:
     def __init__(self, root, handle_journal, handle_goals, handle_stats):
         self._root = root
@@ -20,7 +21,7 @@ class MainView:
         self._frame = ttk.Frame(master=self._root)
         label = ttk.Label(
             master=self._frame, text="Welcome to your training journal!"
-            )
+        )
 
         button_journal = ttk.Button(
             master=self._frame,
@@ -42,6 +43,4 @@ class MainView:
         button_journal.grid(row=1, column=0, padx=5, pady=5)
         button_goals.grid(row=2, column=0, padx=5, pady=5)
         button_stats.grid(row=3, column=0, padx=5, pady=5)
-        self._frame.grid_columnconfigure(0, weight = 1, minsize=500)
-
-        
+        self._frame.grid_columnconfigure(0, weight=1, minsize=500)

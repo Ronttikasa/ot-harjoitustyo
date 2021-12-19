@@ -1,3 +1,4 @@
+import datetime
 from entities.practice import Practice
 
 # luokka tallentaa tietoa toistaiseksi kovakoodattuun tiedostoon trainingjournal.txt,
@@ -57,7 +58,12 @@ class PracticeRepository:
     def _write(self, entries: list):
         with open("trainingjournal.txt", "a", encoding="utf-8") as file:
             for entry in entries:
-                row = f"{entry.id};{entry.date};{entry.start};{entry.end};{entry.notes}"
+                row = (
+                    # f"{entry.id};{entry.date.strftime('%d-%m-%Y')};\
+                    # {entry.start.strftime('%H:%M')};{entry.end.strtime('%H:%M')};\
+                    # {entry.notes}"
+                    f"{entry.id};{entry.date};{entry.start};{entry.end};{entry.notes}"
+                )
                 file.write(f"{row}\n")
 
     def _read(self):
@@ -70,9 +76,9 @@ class PracticeRepository:
                 parts = row.split(";")
 
                 prac_id = parts[0]
-                date = parts[1]
-                start = parts[2]
-                end = parts[3]
+                date = datetime.datetime.strptime(parts[1], "%m/%d/%Y").date()
+                start = datetime.datetime.strptime(parts[2], "%H:%M:%S").time()
+                end = datetime.datetime.strptime(parts[2], "%H:%M:%S").time()
                 notes = parts[4]
 
                 entries.append(

@@ -17,9 +17,9 @@ class Practice:
         """Class constructor, creates a new practice.
 
         Args:
-            date (datetime.date): Practice date
-            start (str): Start time (hh:mm)
-            end (str): End time (hh:mm)
+            date: Practice date
+            start: Start time (hh:mm)
+            end: End time (hh:mm)
             notes (str, optional): Notes about the practice session. Defaults to "".
             entry_id (str, optional): Entry id. Defaults to a generated uuid.
         """
@@ -30,7 +30,7 @@ class Practice:
         self.id = entry_id or str(uuid.uuid4())
 
     def __str__(self):
-        return f"{self.date}, from {self.start} to {self.end}. Notes: {self.notes}"
+        return f"{self.date}, {self.start} - {self.end}. Notes: {self.notes}"
 
     def length(self):
         """Duration of a practice session
@@ -39,7 +39,5 @@ class Practice:
             float: Practice duration in hours
         """
 
-        fmt = "%H:%M"
-        tdelta = datetime.strptime(self.end, fmt) - \
-            datetime.strptime(self.start, fmt)
+        tdelta = self.end - self.start
         return tdelta.seconds / 3600
