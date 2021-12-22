@@ -1,5 +1,4 @@
 import uuid
-from datetime import datetime
 
 
 class Practice:
@@ -30,7 +29,8 @@ class Practice:
         self.id = entry_id or str(uuid.uuid4())
 
     def __str__(self):
-        return f"{self.date.strftime('%d.%m.%Y')}, {self.start.strftime('%H:%M')} - {self.end.strftime('%H:%M')}. Notes: {self.notes}"
+        return f"{self.date.strftime('%d.%m.%Y')}, "\
+        f"{self.start.strftime('%H:%M')} - {self.end.strftime('%H:%M')}. Notes: {self.notes}"
 
     def length(self):
         """Duration of a practice session

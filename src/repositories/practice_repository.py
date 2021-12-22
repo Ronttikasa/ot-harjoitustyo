@@ -3,9 +3,6 @@ from pathlib import Path
 from entities.practice import Practice
 from config import JOURNAL_FILE_PATH
 
-# luokka tallentaa tietoa toistaiseksi kovakoodattuun tiedostoon trainingjournal.txt,
-# tämä on tarkoitus muuttaa myöhemmin
-
 
 class PracticeRepository:
     """The class responsible for the database operations of practice journal entries.
@@ -32,18 +29,11 @@ class PracticeRepository:
 
         return self._read()
 
-    def list_all_with_number(self):
-        """Prints all the entries with an identifying number
-        """
-
-        for index, entry in enumerate(self.list_all()):
-            print(index+1, entry)
-
     def delete_all(self):
         """Deletes all the entries in the database.
         """
-
-        with open("trainingjournal.txt", "w", encoding="utf-8") as file:
+        self._check_file_exists()
+        with open(self._file_path, "w", encoding="utf-8") as file:
             file.write("")
 
     def delete_entry(self, tbd_id):
@@ -62,11 +52,13 @@ class PracticeRepository:
 
     def _write(self, entries: list):
         self._check_file_exists()
-        
+
         with open(self._file_path, "a", encoding="utf-8") as file:
             for entry in entries:
                 row = (
-                    f"{entry.id};{entry.date.strftime('%m/%d/%y')};{entry.start.strftime('%H:%M')};{entry.end.strftime('%H:%M')};{entry.notes}"
+                    f"{entry.id};{entry.date.strftime('%m/%d/%y')};"\
+                    f"{entry.start.strftime('%H:%M')};"\
+                    f"{entry.end.strftime('%H:%M')};{entry.notes}"
                 )
                 file.write(f"{row}\n")
 
@@ -82,7 +74,8 @@ class PracticeRepository:
                 parts = row.split(";")
 
                 prac_id = parts[0]
-                entry_date = datetime.datetime.strptime(parts[1], "%m/%d/%y").date()
+                entry_date = datetime.datetime.strptime(
+                    parts[1], "%m/%d/%y").date()
                 start = datetime.datetime.strptime(parts[2], "%H:%M").time()
                 end = datetime.datetime.strptime(parts[3], "%H:%M").time()
                 notes = parts[4]

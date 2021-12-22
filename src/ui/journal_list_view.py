@@ -33,11 +33,11 @@ class JournalItemView:
         )
 
         label.grid(row=0, column=0, padx=5, pady=5, sticky=constants.EW)
-        delete_button.grid(row=0, column=1, padx=5, pady=5, sticky=constants.EW)
+        delete_button.grid(row=0, column=1, padx=5,
+                           pady=5, sticky=constants.EW)
 
         entry_frame.grid_columnconfigure(0, weight=1, minsize=400)
         entry_frame.pack(fill=constants.X)
-
 
 
 class JournalListView:

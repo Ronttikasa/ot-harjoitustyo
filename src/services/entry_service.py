@@ -25,11 +25,12 @@ class EntryService:
         end = datetime.datetime.strptime(end, "%H:%M")
         practice = Practice(entry_date, start, end, notes)
         self._practice_repo.create(practice)
-    
+
     def list_all(self):
         return self._practice_repo.list_all()
 
     def delete_entry(self, delete_id):
         self._practice_repo.delete_entry(delete_id)
+
 
 entry_service = EntryService()

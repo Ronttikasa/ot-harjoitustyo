@@ -106,10 +106,11 @@ class JournalView:
         notes_label.grid(row=6, padx=5, pady=5, sticky=constants.EW)
         self._notes_entry.grid(row=7, columnspan=2, padx=5,
                                pady=5, sticky=constants.EW)
-        create_entry_button.grid(columnspan=2, padx=5, pady=5, sticky=constants.EW)
+        create_entry_button.grid(columnspan=2, padx=5,
+                                 pady=5, sticky=constants.EW)
 
     def _handle_create_entry(self):
-        entry_date = datetime.strptime(self._cal.get_date(),'%m/%d/%y')        
+        entry_date = datetime.strptime(self._cal.get_date(), '%m/%d/%y')
         start = self._start_time_entry.get()
         end = self._end_time_entry.get()
         notes = self._notes_entry.get()

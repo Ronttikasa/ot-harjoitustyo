@@ -1,6 +1,6 @@
-from entities.goal import Goal
 from pathlib import Path
 from config import GOALS_FILE_PATH
+from entities.goal import Goal
 
 # luokka tallentaa tietoa toistaiseksi kovakoodattuun tiedostoon training-goals.txt,
 # tämä on tarkoitus muuttaa myöhemmin
@@ -74,7 +74,7 @@ class GoalRepository:
 
     def _read(self):
         self._check_file_exists()
-        
+
         goals = []
         with open(self._file_path, encoding="utf-8") as file:
             for row in file:
