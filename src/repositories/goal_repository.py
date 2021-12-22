@@ -1,4 +1,6 @@
 from entities.goal import Goal
+from pathlib import Path
+from config import GOALS_FILE_PATH
 
 # luokka tallentaa tietoa toistaiseksi kovakoodattuun tiedostoon training-goals.txt,
 # tämä on tarkoitus muuttaa myöhemmin
@@ -8,8 +10,8 @@ class GoalRepository:
     """The class responsible for the database operations of goals.
     """
 
-    def __init__(self):
-        pass
+    def __init__(self, file_path):
+        self._file_path = file_path
 
     def create(self, entry: Goal):
         """Adds a new goal in the database.
@@ -48,25 +50,33 @@ class GoalRepository:
             if goal.id == goal_id:
                 goal.mark_done()
             updated_goals.append(goal)
-        self.delete_all()
+        self._delete_all()
         self._write(updated_goals)
 
-    def delete_all(self):
+    def _check_file_exists(self):
+        Path(self._file_path).touch()
+
+    def _delete_all(self):
         """Deletes all goals.
         """
+        self._check_file_exists()
 
-        with open("training-goals.txt", "w", encoding="utf-8") as file:
+        with open(self._file_path, "w", encoding="utf-8") as file:
             file.write("")
 
     def _write(self, goals: list):
-        with open("training-goals.txt", "a", encoding="utf-8") as file:
+        self._check_file_exists()
+
+        with open(self._file_path, "a", encoding="utf-8") as file:
             for goal in goals:
                 row = f"{goal.id};{goal.content};{goal.reached}"
                 file.write(f"{row}\n")
 
     def _read(self):
+        self._check_file_exists()
+        
         goals = []
-        with open("training-goals.txt", encoding="utf-8") as file:
+        with open(self._file_path, encoding="utf-8") as file:
             for row in file:
                 row = row.strip()
                 if row == "":
@@ -82,4 +92,4 @@ class GoalRepository:
         return goals
 
 
-goal_repository = GoalRepository()
+goal_repository = GoalRepository(GOALS_FILE_PATH)

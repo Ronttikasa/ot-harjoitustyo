@@ -31,6 +31,9 @@ class JournalView:
         self._initialize_header()
         self._initialize_body()
 
+        self._frame.grid_columnconfigure(0, weight=1, minsize=250)
+        self._frame.grid_columnconfigure(1, weight=1, minsize=250)
+
     def _initialize_header(self):
         header_label = ttk.Label(
             master=self._frame,
@@ -106,12 +109,12 @@ class JournalView:
         create_entry_button.grid(columnspan=2, padx=5, pady=5, sticky=constants.EW)
 
     def _handle_create_entry(self):
-        date = self._cal.get_date()  # datetime.date
+        entry_date = datetime.strptime(self._cal.get_date(),'%m/%d/%y')        
         start = self._start_time_entry.get()
         end = self._end_time_entry.get()
         notes = self._notes_entry.get()
 
-        entry_service.add_entry_gui(date, start, end, notes)
+        entry_service.add_entry_gui(entry_date, start, end, notes)
         self._start_time_entry.delete(0, constants.END)
         self._end_time_entry.delete(0, constants.END)
         self._notes_entry.delete(0, constants.END)

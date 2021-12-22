@@ -8,6 +8,7 @@ authors = ["Silja Ojanen <44512829+Ronttikasa@users.noreply.github.com>"]
 python = "^3.8"
 invoke = "^1.6.0"
 tkcalendar = "^1.6.1"
+python-dotenv = "^0.19.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"

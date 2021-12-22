@@ -10,7 +10,6 @@ class StatsService:
 
     def __init__(self, practice_repo=default_repo):
         self._practice_repo = practice_repo
-        # self._practice_repo = PracticeRepository
 
     def average_duration(self):
         """Average practice duration

@@ -3,6 +3,11 @@ from invoke import task
 @task
 def start(ctx):
     ctx.run("python3 src/index.py", pty=True)
+    
+@task # käynnistys jos python3-komento ei toimi
+def start_win(ctx):    
+    ctx.run("python src/index.py")
+
 
 @task
 def test(ctx):

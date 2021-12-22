@@ -1,5 +1,7 @@
 import datetime
+from pathlib import Path
 from entities.practice import Practice
+from config import JOURNAL_FILE_PATH
 
 # luokka tallentaa tietoa toistaiseksi kovakoodattuun tiedostoon trainingjournal.txt,
 # tämä on tarkoitus muuttaa myöhemmin
@@ -9,8 +11,8 @@ class PracticeRepository:
     """The class responsible for the database operations of practice journal entries.
     """
 
-    def __init__(self):
-        pass
+    def __init__(self, file_path):
+        self._file_path = file_path
 
     def create(self, entry: Practice):
         """Adds a new practice entry to the database.
@@ -55,20 +57,24 @@ class PracticeRepository:
         self.delete_all()
         self._write(entries)
 
+    def _check_file_exists(self):
+        Path(self._file_path).touch()
+
     def _write(self, entries: list):
-        with open("trainingjournal.txt", "a", encoding="utf-8") as file:
+        self._check_file_exists()
+        
+        with open(self._file_path, "a", encoding="utf-8") as file:
             for entry in entries:
                 row = (
-                    # f"{entry.id};{entry.date.strftime('%d-%m-%Y')};\
-                    # {entry.start.strftime('%H:%M')};{entry.end.strtime('%H:%M')};\
-                    # {entry.notes}"
-                    f"{entry.id};{entry.date};{entry.start};{entry.end};{entry.notes}"
+                    f"{entry.id};{entry.date.strftime('%m/%d/%y')};{entry.start.strftime('%H:%M')};{entry.end.strftime('%H:%M')};{entry.notes}"
                 )
                 file.write(f"{row}\n")
 
     def _read(self):
+        self._check_file_exists()
+
         entries = []
-        with open("trainingjournal.txt", encoding="utf-8") as file:
+        with open(self._file_path, encoding="utf-8") as file:
             for row in file:
                 row = row.replace("\n", "")
                 if row == "":
@@ -76,15 +82,15 @@ class PracticeRepository:
                 parts = row.split(";")
 
                 prac_id = parts[0]
-                date = datetime.datetime.strptime(parts[1], "%m/%d/%Y").date()
-                start = datetime.datetime.strptime(parts[2], "%H:%M:%S").time()
-                end = datetime.datetime.strptime(parts[2], "%H:%M:%S").time()
+                entry_date = datetime.datetime.strptime(parts[1], "%m/%d/%y").date()
+                start = datetime.datetime.strptime(parts[2], "%H:%M").time()
+                end = datetime.datetime.strptime(parts[3], "%H:%M").time()
                 notes = parts[4]
 
                 entries.append(
-                    Practice(date, start, end, notes, prac_id))
+                    Practice(entry_date, start, end, notes, prac_id))
 
         return entries
 
 
-practice_repository = PracticeRepository()
+practice_repository = PracticeRepository(JOURNAL_FILE_PATH)
