@@ -30,7 +30,7 @@ class Practice:
 
     def __str__(self):
         return f"{self.date.strftime('%d.%m.%Y')}, "\
-        f"{self.start.strftime('%H:%M')} - {self.end.strftime('%H:%M')}. Notes: {self.notes}"
+            f"{self.start.strftime('%H:%M')} - {self.end.strftime('%H:%M')}. Notes: {self.notes}"
 
     def length(self):
         """Duration of a practice session
@@ -38,6 +38,5 @@ class Practice:
         Returns:
             float: Practice duration in hours
         """
-
         tdelta = self.end - self.start
         return tdelta.seconds / 3600

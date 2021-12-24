@@ -1,4 +1,4 @@
-from tkinter import ttk, constants
+from tkinter import font, ttk, constants
 from services.entry_service import entry_service
 
 
@@ -76,7 +76,8 @@ class JournalListView:
 
     def _initialize_header(self):
         header_label = ttk.Label(
-            master=self._frame, text="Training journal")
+            master=self._frame, text="Training journal", font=20
+        )
 
         header_back_button = ttk.Button(
             master=self._frame,

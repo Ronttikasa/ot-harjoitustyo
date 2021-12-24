@@ -3,12 +3,14 @@ from ui.journal_view import JournalView
 from ui.main_view import MainView
 from ui.goals_view import GoalsView
 from ui.journal_list_view import JournalListView
+from ui.stats_view import StatsView
 
 
 class GUI:
     def __init__(self, root):
         self._root = root
         self._current_view = None
+        self._root.minsize(width=500, height=500)
 
     def start(self):
         self._show_main_view()
@@ -63,13 +65,11 @@ class GUI:
         self._current_view.pack()
 
     def _show_stats_view(self):
-        pass
+        self._hide_current_view()
 
+        self._current_view = StatsView(
+            self._root,
+            self._show_main_view
+        )
 
-window = Tk()
-window.title("Training journal")
-
-gui = GUI(window)
-gui.start()
-
-window.mainloop()
+        self._current_view.pack()

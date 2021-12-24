@@ -82,7 +82,7 @@ class GoalsView:
 
     def _initialize_header(self):
         header_label = ttk.Label(
-            master=self._frame, text="Your figure skating goals")
+            master=self._frame, text="Your figure skating goals", font=20)
 
         header_back_button = ttk.Button(
             master=self._frame,

@@ -20,7 +20,9 @@ class MainView:
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
         label = ttk.Label(
-            master=self._frame, text="Welcome to your training journal!"
+            master=self._frame,
+            text="Welcome to your training journal!",
+            font=25
         )
 
         button_journal = ttk.Button(

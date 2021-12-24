@@ -1,11 +1,15 @@
-# from ui.text_ui import UI
+from tkinter import Tk
 from ui.gui import GUI
 
 
 def main():
-    # app_ui = UI()
-    app_ui = GUI()
+    window = Tk()
+    window.title("Training journal")
+
+    app_ui = GUI(window)
     app_ui.start()
+
+    window.mainloop()
 
 
 if __name__ == '__main__':

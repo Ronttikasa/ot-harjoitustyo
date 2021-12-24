@@ -33,4 +33,7 @@ class StatsService:
         all_hours = 0
         for session in self._practice_repo.list_all():
             all_hours += session.length()
-        return round(all_hours, 2)
+        return round(all_hours, 0)
+
+
+stats_service = StatsService()

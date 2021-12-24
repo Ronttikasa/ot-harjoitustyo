@@ -56,8 +56,8 @@ class PracticeRepository:
         with open(self._file_path, "a", encoding="utf-8") as file:
             for entry in entries:
                 row = (
-                    f"{entry.id};{entry.date.strftime('%m/%d/%y')};"\
-                    f"{entry.start.strftime('%H:%M')};"\
+                    f"{entry.id};{entry.date.strftime('%m/%d/%y')};"
+                    f"{entry.start.strftime('%H:%M')};"
                     f"{entry.end.strftime('%H:%M')};{entry.notes}"
                 )
                 file.write(f"{row}\n")
@@ -75,9 +75,10 @@ class PracticeRepository:
 
                 prac_id = parts[0]
                 entry_date = datetime.datetime.strptime(
-                    parts[1], "%m/%d/%y").date()
-                start = datetime.datetime.strptime(parts[2], "%H:%M").time()
-                end = datetime.datetime.strptime(parts[3], "%H:%M").time()
+                    parts[1], "%m/%d/%y")  # .date()
+                start = datetime.datetime.strptime(
+                    parts[2], "%H:%M")  # .time()
+                end = datetime.datetime.strptime(parts[3], "%H:%M")  # .time()
                 notes = parts[4]
 
                 entries.append(

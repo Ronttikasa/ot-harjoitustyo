@@ -23,4 +23,6 @@
 | 16.12. | 4 | gui |
 | 17.12. | 2 | gui |
 | 18.12. | 3 | gui |
-| yht | 33 | |
+| 22.12. | 3 | gui, ympäristömuuttujat, yleistä parantelua |
+| 23.12. | 2 | gui valmiiksi, virheellisen syötteen käsittely |
+| yht | 38 | |
