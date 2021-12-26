@@ -20,6 +20,10 @@ Luokkaa `StatsService` testataan [TestStatsService]()-testiluokalla. Myös täm�
 
 Repositorio-luokkien `PracticeRepository` ja `GoalRepository` testauksessa käytetään pelkästään testeissä käytössä olevia tiedostoja, joiden nimet voidaan konfiguroida *.env.test*-tiedostossa. `PracticeRepository`-luokkaa testataan testiluokalla [TestPracticeRepository]() ja `GoalRepository`-luokkaa testiluokalla [TestGoalRepository]().
 
+### Goal- ja Practice-luokat
+
+Sovellus käsittelee tiedostoon talletettavaa tietoa `Goal`- ja `Practice`-luokkien olioina. Näitä luokkia testataan [TestGoal]()- ja [TestPractice]()-testiluokilla.
+
 ### Testauskattavuus
 
 Sovelluksen testauksen haarautumakattavuus on 97%. Käyttöliittymän koodi ei ole mukana testauksessa.
