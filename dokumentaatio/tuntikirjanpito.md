@@ -27,5 +27,5 @@
 | 23.12. | 2 | gui valmiiksi, virheellisen syötteen käsittely |
 | 24.12. | 2 | testausta |
 | 25.12. | 0,5 | docstringit valmiiksi |
-| | 1,5 | käyttöohjeen ja readmen päivitys, testausdokumentti |
-| yht | 42 | |
+| | 2 | käyttöohjeen ja readmen päivitys, testausdokumentti |
+| yht | 42,5 | |
