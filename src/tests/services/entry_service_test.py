@@ -55,7 +55,7 @@ class TestEntryService(unittest.TestCase):
     def test_adding_invalid_time(self):
         self.assertRaises(
             InvalidTimeEntryError,
-            lambda: self.entry_service.add_entry_gui(
+            lambda: self.entry_service.add_entry(
                 self.date_a, "invalid", "1000", "some notes"
             )
         )
