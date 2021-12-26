@@ -4,7 +4,7 @@
 
 Sovelluksen rakenteessa on noudatettu kolmitasoista kerrosarkkitehtuuria. Pakkausrakenne on kuvattu oheisessa kaaviossa:
 
-KUVA
+![](./kuvat/arkkitehtuuri_pakkauskaavio.png)
 
 Pakkaukset sisältävät ohjelman koodin seuraavasti jaoteltuna:
 - Pakkaus *ui* sisältää käyttöliittymästä vastaavan koodin
@@ -31,7 +31,9 @@ Tavoitteet listaavassa näkymässä kutsutaan metodia [initialize_goal_list](htt
 
 Sovelluksen luokat [Goal](https://github.com/Ronttikasa/treenipaivakirja/blob/3ee7f624aa916d4e072aed377ffd3c21275fce92/src/entities/goal.py#L4) ja [Practice](https://github.com/Ronttikasa/treenipaivakirja/blob/3ee7f624aa916d4e072aed377ffd3c21275fce92/src/entities/practice.py#L4) kuvaavat sovelluksen tallentamia tietoja: tavoitteita ja treenimerkintöjä.
 
-Sovelluslogiikasta vastaavat luokkien [PracticeService](), [GoalService]() ja [StatsService]() oliot. Nimiensä mukaisesti nämä vastaavat treenimerkintöihin, tavoitteisiin sekä tilastointiin liittyvistä palveluista. Luokat tarjoavat käyttöliittymän toiminnoille omat metodit, esimerkiksi:
+![](./kuvat/arkkitehtuuri_tiedot.png)
+
+Sovelluslogiikasta vastaavat luokkien [EntryService](https://github.com/Ronttikasa/treenipaivakirja/blob/master/src/services/entry_service.py), [GoalService](https://github.com/Ronttikasa/treenipaivakirja/blob/master/src/services/goal_service.py) ja [StatsService](https://github.com/Ronttikasa/treenipaivakirja/blob/master/src/services/stats_service.py) oliot. Nimiensä mukaisesti nämä vastaavat treenimerkintöihin, tavoitteisiin sekä tilastointiin liittyvistä palveluista. Luokat tarjoavat käyttöliittymän toiminnoille omat metodit, esimerkiksi:
 
 - `add_entry(entry_date, start, end, notes)`
 - `delete_entry(entry_id)`
@@ -39,7 +41,11 @@ Sovelluslogiikasta vastaavat luokkien [PracticeService](), [GoalService]() ja [S
 - `mark_done(goal_id)`
 - `average_duration()`
 
-Luokat `GoalService`, `PracticeService` ja `StatsService` käsittelevät treenimerkintöjä ja tavoitteita tietojen tallennuksesta ja lukemisesta huolehtivien luokkien [PracticeRepository](https://github.com/Ronttikasa/treenipaivakirja/blob/master/src/repositories/practice_repository.py) ja [GoalRepository](https://github.com/Ronttikasa/treenipaivakirja/blob/master/src/repositories/goal_repository.py) kautta. Näiden luokkien oliot injektoidaan sovelluslogiikan luokille konstruktorikutsun yhteydessä.
+Luokat `GoalService`, `EntryService` ja `StatsService` käsittelevät treenimerkintöjä ja tavoitteita tietojen tallennuksesta ja lukemisesta huolehtivien luokkien [PracticeRepository](https://github.com/Ronttikasa/treenipaivakirja/blob/master/src/repositories/practice_repository.py) ja [GoalRepository](https://github.com/Ronttikasa/treenipaivakirja/blob/master/src/repositories/goal_repository.py) kautta. Näiden luokkien oliot injektoidaan sovelluslogiikan luokille konstruktorikutsun yhteydessä.
+
+Ohjelman osien suhdetta kuvaa seuraava luokka/pakkauskaavio:
+
+![](./kuvat/arkkitehtuuri_luokka_pakkaus.png)
 
 ## Tiedon pysyväistallennus
 
@@ -67,12 +73,35 @@ c195b751-2ab5-4ef8-a550-389be8ee644b;flip by end of 2021;False
 5c782286-bf88-4cee-bea6-e096d2a85dde;scratch spin;False
 ```
 
+## Päätoiminnallisuudet
+
+Seuraavissa sekvenssikaavioissa kuvataan joitakin sovelluksen päätoiminnallisuuksia.
+
+### Uuden treenimerkinnän lisääminen
+
+Kun käyttäjä siirtyy päävalikosta treenimerkinnän luomisnäkymään ja luo uuden merkinnän, sovelluksen kontrolli etenee seuraavalla tavalla:
+
+![](./kuvat/arkkitehtuuri_add_entry.png)
+
+"Journal"-painiketta klikattaessa [tapahtumankäsittelijä](https://github.com/Ronttikasa/treenipaivakirja/blob/6550aed7d374dc3c08f12a4afc5f7f1f48b70850/src/ui/main_view.py#L31) kutsuu käyttöliittymän [show_journal_view](https://github.com/Ronttikasa/treenipaivakirja/blob/6550aed7d374dc3c08f12a4afc5f7f1f48b70850/src/ui/gui.py#L36)-metodia ja käyttöliittymä vaihtaa näkymäksi `JournalView`-näkymän.
+
+Nyt käyttäjä antaa syötekenttiin uuden merkinnän luomiseksi tarvittavat tiedot ja painaa "Create"-painiketta. [Tapahtumankäsittelijä](https://github.com/Ronttikasa/treenipaivakirja/blob/6550aed7d374dc3c08f12a4afc5f7f1f48b70850/src/ui/journal_view.py#L138) kutsuu `EntryService`:n metodia [add_entry](https://github.com/Ronttikasa/treenipaivakirja/blob/6550aed7d374dc3c08f12a4afc5f7f1f48b70850/src/services/entry_service.py#L24) parametreina syötekentistä saadut aikatiedot sekä muistiinpanot. Sovelluslogiikka luo näistä tiedoista uuden `Practice`-olion ja tallentaa sen kutsumalla `PracticeRepository`n metodia `create`. Käyttöliittymä tyhjentää syötekentät kun uusi merkintä on luotu onnistuneesti.
+
+### Uuden tavoitteen luominen
+
+Goals-näkymässä "Set new goal" -painikkeen klikkaamisen jälkeen sovelluksen kontrolli etenee seuraavalla tavalla:
+
+![](./kuvat/arkkitehtuuri_add_goal.png)
+
+[Tapahtumankäsittelijä](https://github.com/Ronttikasa/treenipaivakirja/blob/6550aed7d374dc3c08f12a4afc5f7f1f48b70850/src/ui/goals_view.py#L117) kutsuu sovelluslogiikan `GoalService`-luokan metodia [add_goal](https://github.com/Ronttikasa/treenipaivakirja/blob/6550aed7d374dc3c08f12a4afc5f7f1f48b70850/src/services/goal_service.py#L14) parametrinaan käyttäjän antama syöte. Sovelluslogiikka luo uuden `Goal`-olion ja kutsuu `GoalRepository`n metodia `create`, joka tallentaa tavoitteen tiedot tiedostoon. Käyttöliittymä kutsuu tavoitteen luomisen jälkeen omaa metodiaan `initialize_goal_list` ja päivittää näin näytettävän tavoitenäkymän.
+
+### Tavoitteen merkkaaminen saavutetuksi ja muut toiminnallisuudet
+
+Kun käyttäjä klikkaa tavoitenäkymässä tavoitteen kohdalla "Reached!"-painiketta, sovelluksen kontrolli etenee seuraavan kaavion kuvaamalla tavalla:
+
+![](./kuvat/arkkitehtuuri_mark_goal_done.png)
+
+Tässä ja muissa sovelluksen toiminnallisuuksissa toiminta etenee samantyyppisesti aiemmin kuvattujen toiminnallisuuksien kanssa. Käyttöliittymästä siis kutsutaan sovelluslogiikkakerroksen metodeja jotka puolestaan kutsuvat tallennustiedostoja käsitteleviä repositoriokerroksen metodeja. Käyttöliittymä päivittää tarvittaessa näytettävien tietojen listaa toiminnon suorittamisen jälkeen.
 
 
-Ohjelman osien välisiä suhteita kuvaava luokkakaavio
 
-![Luokkakaavio](./kuvat/luokkakaavio.png)
-
-Ohjelman toimintalogiikkaa kuvaava sekvenssikaavio: uuden tavoitteen lisääminen ja tavoitteen merkitseminen saavutetuksi
-
-![Sekvenssikaavio](./kuvat/sekvenssikaavio.png)
