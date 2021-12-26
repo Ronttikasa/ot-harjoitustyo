@@ -8,7 +8,7 @@ Sovellus toimii treenipäiväkirjana urheilun harrastajalle. Nykyisessä muodoss
 
 [Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
 
-[Testausdokumentti]() ADD THIS
+[Testausdokumentti](./dokumentaatio/testausdokumentti.md)
 
 [Arkkitehtuuri](./dokumentaatio/arkkitehtuuri.md)
 
