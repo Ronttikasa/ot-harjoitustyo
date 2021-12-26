@@ -16,7 +16,7 @@ Sovellus toimii treenipäiväkirjana urheilun harrastajalle. Nykyisessä muodoss
 
 ## Release (loppupalautus)
 
-[Github-release](https://github.com/Ronttikasa/treenipaivakirja/releases/tag/viikko6) UPDATE THIS
+[Github-release](https://github.com/Ronttikasa/treenipaivakirja/releases/tag/loppupalautus)
 
 ## Asennus
 
