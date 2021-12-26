@@ -45,4 +45,5 @@ Järjestelmätestauksessa on käyty läpi määrittelydokumentissa ja käyttöoh
 
 ## Sovellukseen jääneet laatuongelmat
 
-Sovellus ei anna järkevää virheilmoitusta mikäli konfiguraatiotiedostossa määriteltyihin tiedostoihin ei ole luku- tai kirjoitusoikeuksia.
+- Sovellus ei anna järkevää virheilmoitusta mikäli konfiguraatiotiedostossa määriteltyihin tiedostoihin ei ole luku- tai kirjoitusoikeuksia.
+- Cubbli-etätyöpöydällä testatessa treenimerkinnän lisäämisnäkymän renderöityminen vaati välillä ctrl+alt+del-napin painamista, en ole varma johtuiko tämä etätyöpöydästä vai sovelluksesta itsestään. Paikallisesti Windowsilla ongelmaa ei esiintynyt.
