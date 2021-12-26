@@ -1,7 +1,5 @@
 # Testausdokumentti
 
-# JÄRJESTELMÄTESTAUS PUUTTUU
-
 Ohjelmaa on testattu unittestilla automatisoiduin testein sekä manuaalisilla järjestelmätason testeillä.
 
 ## Yksikkö- ja integraatiotestaus
