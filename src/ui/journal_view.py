@@ -82,6 +82,7 @@ class JournalView:
         self._cal = Calendar(
             master=self._frame,
             selectmode="day",
+            date_pattern="dd/mm/yy",
             year=current_date.year,
             month=current_date.month,
             day=current_date.day
@@ -135,7 +136,7 @@ class JournalView:
         )
 
     def _handle_create_entry(self):
-        entry_date = datetime.strptime(self._cal.get_date(), "%m/%d/%y")
+        entry_date = datetime.strptime(self._cal.get_date(), "%d/%m/%y")
         start = self._start_time_entry.get()
         end = self._end_time_entry.get()
         notes = self._notes_entry.get()
