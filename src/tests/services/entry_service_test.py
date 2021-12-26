@@ -37,7 +37,7 @@ class TestEntryService(unittest.TestCase):
         self.notes_b = ""
 
     def test_adding_entry(self):
-        self.entry_service.add_entry_gui(
+        self.entry_service.add_entry(
             self.date_a, self.start_a, self.end_a, self.notes_a
         )
         entries = self.entry_service.list_all()
@@ -45,7 +45,7 @@ class TestEntryService(unittest.TestCase):
         self.assertEqual(entries[0].date, self.date_a)
 
     def test_adding_without_minutes(self):
-        self.entry_service.add_entry_gui(
+        self.entry_service.add_entry(
             self.date_b, self.start_b, self.end_b, self.notes_b
         )
         entries = self.entry_service.list_all()
@@ -61,10 +61,10 @@ class TestEntryService(unittest.TestCase):
         )
 
     def test_delete_entry(self):
-        self.entry_service.add_entry_gui(
+        self.entry_service.add_entry(
             self.date_a, self.start_a, self.end_a, self.notes_a
         )
-        self.entry_service.add_entry_gui(
+        self.entry_service.add_entry(
             self.date_b, self.start_b, self.end_b, self.notes_b
         )
         entries = self.entry_service.list_all()

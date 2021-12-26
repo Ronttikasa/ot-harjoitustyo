@@ -37,7 +37,9 @@ Sovellusta on testattu manuaalisesti järjestelmätasolla.
 
 ### Asennus ja konfigurointi
 
-Sovellus on asennettu ja testattu käyttöohjeessa kuvatulla tavalla Windows- ja Linux-ympäristöissä. 
+Sovellus on asennettu ja testattu käyttöohjeessa kuvatulla tavalla Windows- ja Linux-ympäristöissä. Testauksessa on myös muutettu tallennukseen käytettävien tiedostojen nimiä *.env*-tiedoston kautta.
+
+Sovellusta on testattu sekä niin että tallentamiseen käytettävät tiedostot ovat olleet valmiiksi olemassa, että niin että ohjelma on luonut ne automaattisesti.
 
 ### Toiminnallisuudet
 

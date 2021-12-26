@@ -21,7 +21,7 @@ class EntryService:
             return True
         return False
 
-    def add_entry_gui(self, entry_date, start, end, notes):
+    def add_entry(self, entry_date, start, end, notes):
         """Add the journal entry to the database.
 
         Args:
@@ -56,14 +56,14 @@ class EntryService:
 
         return self._practice_repo.list_all()
 
-    def delete_entry(self, delete_id):
+    def delete_entry(self, entry_id):
         """Deletes a specified entry.
 
         Args:
-            delete_id (str): Id of the entry to be deleted.
+            entry_id (str): Id of the entry to be deleted.
         """
 
-        self._practice_repo.delete_entry(delete_id)
+        self._practice_repo.delete_entry(entry_id)
 
 
 entry_service = EntryService()

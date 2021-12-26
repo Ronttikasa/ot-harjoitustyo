@@ -142,7 +142,7 @@ class JournalView:
         notes = self._notes_entry.get()
 
         try:
-            entry_service.add_entry_gui(entry_date, start, end, notes)
+            entry_service.add_entry(entry_date, start, end, notes)
             self._start_time_entry.delete(0, constants.END)
             self._end_time_entry.delete(0, constants.END)
             self._notes_entry.delete(0, constants.END)
