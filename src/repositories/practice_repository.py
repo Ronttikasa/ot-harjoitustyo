@@ -43,7 +43,7 @@ class PracticeRepository:
         Args:
             tbd_id: Id of the entry to be deleted
         """
-        
+
         entries = self._read()
         entries = [entry for entry in entries if entry.id != tbd_id]
         self.delete_all()
