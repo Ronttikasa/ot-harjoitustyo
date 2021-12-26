@@ -28,5 +28,5 @@
 | 24.12. | 2 | testausta |
 | 25.12. | 0,5 | docstringit valmiiksi |
 | | 2 | käyttöohjeen ja readmen päivitys, testausdokumentti |
-| 26.12 | 2 | testaus etätyöpöydällä, pientä korjailua, arkkitehtuuridokumentti |
-| yht | 44,5 | |
+| 26.12 | 4,5 | testaus etätyöpöydällä, pientä korjailua, arkkitehtuuridokumentti |
+| yht | 47 | |
