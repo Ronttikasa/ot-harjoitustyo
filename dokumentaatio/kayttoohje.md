@@ -2,38 +2,74 @@
 
 Lataa projektin tuoreimman [releasen](https://github.com/Ronttikasa/treenipaivakirja/releases) lähdekoodi.
 
-## Käyttö
+## Konfigurointi
 
-Ohjelmaa käytetään komentoriviltä tekstikäyttöliittymällä.
+Tietojen tallentamiseen käytettävien tiedostojen nimiä voi halutessaan muokata juurihakemiston *.env*-tiedostossa. Tiedostot sijaitsevat *data*-hakemistossa ja ne luodaan sinne automaattisesti. Tiedoston muoto on seuraava:
+
+```
+GOALS_FILENAME=training_goals.txt
+JOURNAL_FILENAME=trainingjournal.txt
+```
+
+## Ohjelman käynnistäminen
+
+Ennen ensimmäistä käyttökertaa asenna sovelluksen riippuvuudet komennolla:
+
+```bash
+poetry install
+```
+
+Tämän jälkeen sovellus käynnistetään komennolla:
+
+```bash
+poetry run invoke start
+```
+
+## Ohjelman käyttö
+
+### Päävalikko
 
 Sovellus avautuu päävalikkonäkymään.
 
-![](./kuvat/main_menu.JPG)
+![](./kuvat/gui_main.png)
 
-Komennolla 1 siirrytään treenipäiväkirjaan, komennolla 2 tavoitelistaukseen, komennolla 3 harjoitustilastoihin. Komento q lopettaa ohjelman.
+Sovelluksessa on kolme eri toimintoa: Varsinainen treenipäiväkirja (journal), tavoitelistaus (goals) sekä treenien tilastointi (stats).
 
-## Treenipäiväkirja
+### Treenipäiväkirja
 
-![](./kuvat/journal_menu.JPG)
+Päävalikon "Journal"-painikkeesta siirrytään uuden treenimerkinnän lisäämisnäkymään.
 
-Näkymässä voidaan luoda uusi merkintä treenipäiväkirjaan komennolla 1 ja seuraten tämän jälkeen ohjelman antamia ohjeita, tarkastella vanhoja merkintöjä komennolla 2 sekä poistaa merkintöjä komennolla 3.
+![](./kuvat/gui_add_entry.png)
 
-![](./kuvat/journal_add_entry.JPG)
+Uuden merkinnän luominen onnistuu valitsemalla kalenterista päivämäärä, kirjoittamalla treenin alkamis- ja loppumisajat sekä treeniin liittyvät kommentit syötekenttiin ja painamalla "Create"-painiketta. Notes-kentän voi myös jättää tyhjäksi.
 
-Komennolla q palataan päävalikkoon.
+Tehtyjä merkintöjä voi tarkastella yläreunan "View previous entries" -painikkeesta.
+
+![](./kuvat/gui_entries.png)
+
+Yläreunan "Main menu" -painiketta klikkaamalla siirrytään takaisin päävalikkoon.
 
 ## Tavoitteet
 
-![](./kuvat/goals_menu.JPG)
+Päävalikon "Goals"-painikkeesta avautuu näkymä jossa voi sekä luoda uusia tavoitteita, tarkastella olemassaolevia tavoitteita sekä merkata niitä saavutetuiksi.
 
-Näkymässä voidaan luoda uusia tavoitteita komennolla 1, tarkastella kaikkia tavoitteita komennolla 2 ja merkitä tavoite saavutetuksi komennolla 3.
-Komennolla q palataan päävalikkoon.
+![](./kuvat/gui_goals.png)
+
+Tavoite voidaan asettaa saavutettu-tilaan painamalla tavoitteen vieressä olevaa "Reached!"-painiketta. Tavoite asetetaan saavutetuksi ja se poistetaan näytettävältä listalta.
+
+Uusi tavoite luodaan kirjoittamalla syötekenttään tavoitteen kuvaus ja painamalla "Set new goal" -painiketta.
+
+Yläreunan "Main menu" -painikkeesta sovellus palaa päävalikkonäkymään.
 
 ## Harjoitustilastot
 
-![](./kuvat/stats.JPG)
+Päävalikon "Stats"-painikkeesta siirrytään tilastonäkymään. Toiminto tarjoaa käyttäjälle tilastoja treenipäiväkirjaan tehdyistä merkinnöistä.
 
-Toiminto tarjoaa tilastoja treenipäiväkirjan merkinnöistä. Tilastojen tulostamisen jälkeen ohjelma palaa päävalikkoon.
+![](./kuvat/gui_stats.png)
+
+Yläreunan "Main menu" -painikkeesta sovellus palaa takaisin päävalikkoon.
+
+
 
 
 

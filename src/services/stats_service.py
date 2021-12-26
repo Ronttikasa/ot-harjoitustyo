@@ -17,6 +17,7 @@ class StatsService:
         Returns:
             float: average duration in hours
         """
+
         sessions = self._practice_repo.list_all()
         durations = []
         for session in sessions:
@@ -27,13 +28,13 @@ class StatsService:
         """Total time spent practicing
 
         Returns:
-            float: total hours
+            int: total hours
         """
 
         all_hours = 0
         for session in self._practice_repo.list_all():
             all_hours += session.length()
-        return round(all_hours, 0)
+        return round(all_hours)
 
 
 stats_service = StatsService()

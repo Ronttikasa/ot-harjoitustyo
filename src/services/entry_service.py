@@ -22,12 +22,22 @@ class EntryService:
         return False
 
     def add_entry_gui(self, entry_date, start, end, notes):
+        """Add the journal entry to the database.
+
+        Args:
+            entry_date (str): date
+            start (str): start time (hh:mm or hh)
+            end (str): end time (hh:mm or hh)
+            notes (str): notes/comments
+
+        Raises:
+            InvalidTimeEntryError: Start/end times are not entered in hh:mm or hh format.
+        """
+
         if self._validate_time(start) and self._validate_time(end):
             if re.search("^[0-1][0-9]$|^2[0-3]$", start):
-                # if len(start) == 2:
                 start += ":00"
             if re.search("^[0-1][0-9]$|^2[0-3]$", end):
-                # if len(end) == 2:
                 end += ":00"
             start = datetime.datetime.strptime(start, "%H:%M")
             end = datetime.datetime.strptime(end, "%H:%M")
@@ -38,9 +48,21 @@ class EntryService:
                 "Times should be entered in hh:mm format")
 
     def list_all(self):
+        """List all the practice sessions recorded in the journal.
+
+        Returns:
+            List of Practice objects.
+        """
+
         return self._practice_repo.list_all()
 
     def delete_entry(self, delete_id):
+        """Deletes a specified entry.
+
+        Args:
+            delete_id (str): Id of the entry to be deleted.
+        """
+
         self._practice_repo.delete_entry(delete_id)
 
 

@@ -5,9 +5,9 @@ class Practice:
     """A class that depicts a practice journal entry.
 
     Attributes:
-        date (str): Date of the practice
-        start (str): Start time
-        end (str): End time
+        date (datetime): Date of the practice
+        start (datetime): Start time
+        end (datetime): End time
         notes (str): Notes about the practice session
         entry_id (str): Entry id
     """
@@ -16,9 +16,9 @@ class Practice:
         """Class constructor, creates a new practice.
 
         Args:
-            date: Practice date
-            start: Start time (hh:mm)
-            end: End time (hh:mm)
+            date (datetime): Practice date
+            start (datetime): Start time
+            end (datetime): End time
             notes (str, optional): Notes about the practice session. Defaults to "".
             entry_id (str, optional): Entry id. Defaults to a generated uuid.
         """

@@ -8,7 +8,6 @@ def start(ctx):
 def start_win(ctx):    
     ctx.run("python src/index.py")
 
-
 @task
 def test(ctx):
     ctx.run("pytest src")

@@ -1,4 +1,4 @@
-from tkinter import font, ttk, constants
+from tkinter import ttk, constants
 from services.entry_service import entry_service
 
 

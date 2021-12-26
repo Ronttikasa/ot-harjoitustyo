@@ -32,6 +32,7 @@ class PracticeRepository:
     def delete_all(self):
         """Deletes all the entries in the database.
         """
+
         self._check_file_exists()
         with open(self._file_path, "w", encoding="utf-8") as file:
             file.write("")
@@ -42,6 +43,7 @@ class PracticeRepository:
         Args:
             tbd_id: Id of the entry to be deleted
         """
+        
         entries = self._read()
         entries = [entry for entry in entries if entry.id != tbd_id]
         self.delete_all()
@@ -75,10 +77,14 @@ class PracticeRepository:
 
                 prac_id = parts[0]
                 entry_date = datetime.datetime.strptime(
-                    parts[1], "%m/%d/%y")  # .date()
+                    parts[1], "%m/%d/%y"
+                )
                 start = datetime.datetime.strptime(
-                    parts[2], "%H:%M")  # .time()
-                end = datetime.datetime.strptime(parts[3], "%H:%M")  # .time()
+                    parts[2], "%H:%M"
+                )
+                end = datetime.datetime.strptime(
+                    parts[3], "%H:%M"
+                )
                 notes = parts[4]
 
                 entries.append(

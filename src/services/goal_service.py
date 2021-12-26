@@ -20,30 +20,31 @@ class GoalService:
 
     def list_all(self):
         """Lists all the goals.
+
+        Returns:
+            List of Goal objects.
         """
-        # self._goal_repo.list_all_with_number()
+
         return self._goal_repo.list_all()
 
     def list_all_unreached(self):
+        """Lists all goals that are not reached.
+
+        Returns:
+            List of Goal objects.
+        """
+
         goals = self._goal_repo.list_all()
-        return [goal for goal in goals if not goal.reached]
-
-    # tästä puolet käyttöliittymään?
-    # def mark_done(self):
-    #     """Sets a goal status to reached.
-    #     """
-
-    #     all_goals = self._goal_repo.list_all()
-    #     self._goal_repo.list_all_with_number()
-    #     done_index = int(input("Which goal was it: ")) - 1
-    #     if done_index not in range(len(all_goals)):
-    #         print("No such goal found, try again!")
-    #         return
-    #     done_id = all_goals[done_index].id
-    #     self._goal_repo.mark_done(done_id)
+        return [goal for goal in goals if not goal.status]
 
     def mark_done(self, goal_id):
-        return self._goal_repo.mark_done(goal_id)
+        """Sets the status of a specified goal to reached.
+
+        Args:
+            goal_id (str): Id of the goal.
+        """
+
+        self._goal_repo.mark_done(goal_id)
 
 
 goal_service = GoalService()

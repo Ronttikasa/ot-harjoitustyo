@@ -1,4 +1,3 @@
-from os import stat
 from tkinter import ttk, constants
 from services.stats_service import stats_service
 

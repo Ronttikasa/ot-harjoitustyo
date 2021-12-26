@@ -8,8 +8,10 @@ class TestGoal(unittest.TestCase):
         self.goal_b = Goal("scratch spin in 2021", True, "123456")
         self.goal_c = Goal("flip in 2021", goal_id="987654")
 
-    def test_str(self):
-        self.assertEqual(str(self.goal_a), "[ ] loop in 2021")
-        self.assertEqual(str(self.goal_b), "[x] scratch spin in 2021")
+    def test_mark_done(self):
+        self.goal_a.mark_done()
+        self.assertEqual(self.goal_a.status, True)
 
-# todo: muuta goal reached -tilaa luokan metodilla
+    def test_new_goal_status(self):
+        self.assertEqual(self.goal_a.status, False)
+        self.assertEqual(self.goal_b.status, True)

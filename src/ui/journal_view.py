@@ -1,7 +1,6 @@
 from tkinter import StringVar, ttk, constants
 from tkcalendar import Calendar
 from datetime import datetime
-
 from services.entry_service import entry_service, InvalidTimeEntryError
 
 
@@ -136,7 +135,7 @@ class JournalView:
         )
 
     def _handle_create_entry(self):
-        entry_date = datetime.strptime(self._cal.get_date(), '%m/%d/%y')
+        entry_date = datetime.strptime(self._cal.get_date(), "%m/%d/%y")
         start = self._start_time_entry.get()
         end = self._end_time_entry.get()
         notes = self._notes_entry.get()

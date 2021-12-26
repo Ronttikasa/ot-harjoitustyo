@@ -4,54 +4,66 @@ Sovellus toimii treenipäiväkirjana urheilun harrastajalle. Nykyisessä muodoss
 
 ## Dokumentaatio
 
+[Käyttöohje](./dokumentaatio/kayttoohje.md)
+
 [Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
 
-[Työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)
+[Testausdokumentti]() ADD THIS
 
 [Arkkitehtuuri](./dokumentaatio/arkkitehtuuri.md)
 
-[Käyttöohje](./dokumentaatio/kayttoohje.md)
+[Työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)
 
-## Release viikko 6
+## Release (loppupalautus)
 
-[Github-release](https://github.com/Ronttikasa/treenipaivakirja/releases/tag/viikko6)
+[Github-release](https://github.com/Ronttikasa/treenipaivakirja/releases/tag/viikko6) UPDATE THIS
 
 ## Asennus
 
-Asenna riippuvuudet komennolla
+1. Asenna riippuvuudet komennolla
 
-`poetry install`
+```bash
+poetry install
+```
 
-Suorita ohjelma komennolla
+2. Suorita ohjelma komennolla
 
-`poetry run invoke start`
-
-Huom. ohjelma tallentaa tietoa tiedostoihin jotka luodaan siinä vaiheessa kun ensimmäiset treeni- ja tavoitemerkinnät tehdään. Tällä hetkellä ohjelma kaatuu jos merkintöjä yrittää tarkastella ennen kuin niitä on tehty. Aloita siis luomalla merkintöjä!
+```bash
+poetry run invoke start
+```
 
 ## Komentorivitoiminnot
 
 #### Ohjelman suorittaminen
 
-Suorita ohjelma komennolla
+Suorita ohjelma komennolla:
 
-`poetry run invoke start`
+```bash
+poetry run invoke start
+```
 
 #### Testaus
 
-Suorita testit komennolla
+Suorita testit komennolla:
 
-`poetry run invoke test`
+```bash
+poetry run invoke test
+```
 
 #### Testikattavuus
 
 Testikattavuusraportin generointi:
 
-`poetry run invoke coverage-report`
+```bash
+poetry run invoke coverage-report
+```
 
-Raportti löytyy htmlcov-hakemistosta.
+Raportti luodaan *htmlcov*-hakemistoon.
 
 #### Pylint
 
 Tiedostossa .pylintrc määriteltyjen tarkastusten suorittaminen:
 
-`poetry run invoke lint`
+``` bash
+poetry run invoke lint
+```

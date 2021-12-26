@@ -1,5 +1,4 @@
 from tkinter import ttk, constants
-
 from services.goal_service import goal_service
 
 

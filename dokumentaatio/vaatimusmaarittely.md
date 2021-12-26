@@ -10,12 +10,13 @@ Sovelluksen avulla taitoluistelun harrastaja voi pitää treenipäiväkirjaa.
 - [x] käyttäjä voi tarkastella aikaisempia merkintöjä
 - [x] käyttäjä voi poistaa treenin
 - [x] tavoitteiden asettaminen (esim. uusien elementtien oppiminen) ja merkkaaminen saavutetuksi
-- [x] treenien tilastointi (tehty viikko 6)
+- [x] treenien tilastointi
 
 ### Jatkokehitysideoita
 
-Mahdollisia muita toimintoja joilla sovellusta täydennetään ajan salliessa:
+Mahdollisia muita toimintoja joilla sovellusta voisi täydentää:
 
 - aikaisemman treenin tietojen muokkaaminen
 - harjoiteltujen elementtien valitseminen listasta
+- tilastojen laajentaminen
 - tulevien treenien suunnittelu

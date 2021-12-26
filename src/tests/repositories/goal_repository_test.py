@@ -18,7 +18,7 @@ class TestGoalRepository(unittest.TestCase):
 
         self.assertEqual(len(goals), 1)
         self.assertEqual(goals[0].content, self.goal_a.content)
-        self.assertEqual(goals[0].reached, False)
+        self.assertEqual(goals[0].status, False)
         self.assertEqual(goals[0].id, self.goal_a.id)
 
     def test_create_optionals(self):
@@ -26,7 +26,7 @@ class TestGoalRepository(unittest.TestCase):
         goals = self.repo.list_all()
 
         self.assertEqual(goals[0].content, self.goal_b.content)
-        self.assertEqual(goals[0].reached, True)
+        self.assertEqual(goals[0].status, True)
         self.assertEqual(goals[0].id, "123456")
 
     def test_list_all(self):
@@ -52,5 +52,5 @@ class TestGoalRepository(unittest.TestCase):
         self.repo.mark_done(self.goal_a.id)
         goals = self.repo.list_all()
 
-        self.assertEqual(goals[0].reached, True)
-        self.assertEqual(goals[1].reached, False)
+        self.assertEqual(goals[0].status, True)
+        self.assertEqual(goals[1].status, False)
