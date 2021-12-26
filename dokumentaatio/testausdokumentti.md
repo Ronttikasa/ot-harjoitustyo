@@ -1,6 +1,6 @@
 # Testausdokumentti
 
-# LINKIT + JÄRJESTELMÄTESTAUS PUUTTUU
+# JÄRJESTELMÄTESTAUS PUUTTUU
 
 Ohjelmaa on testattu unittestilla automatisoiduin testein sekä manuaalisilla järjestelmätason testeillä.
 
@@ -10,19 +10,19 @@ Ohjelmaa on testattu unittestilla automatisoiduin testein sekä manuaalisilla j�
 
 Sovelluslogiikasta vastaavat luokat `EntryService` treenipäiväkirjatoiminnallisuuden, `GoalService` tavoitteiden ja `StatsService` tilastotoiminnallisuuden osalta.
 
-Luokkaa `EntryService` testataan [TestEntryService]()-testiluokalla. `EntryService`-olio on testauksessa alustettu niin, että sille on injektoitu valekomponenttina repositorio-oliot jotka tallentavat tietoa muistiin tekstitiedoston sijasta. Tähän tarkoitukseen testeissä on käytetty luokkaa `FakePracticeRepository`.
+Luokkaa `EntryService` testataan [TestEntryService](https://github.com/Ronttikasa/treenipaivakirja/blob/master/src/tests/services/entry_service_test.py)-testiluokalla. `EntryService`-olio on testauksessa alustettu niin, että sille on injektoitu valekomponenttina repositorio-oliot jotka tallentavat tietoa muistiin tekstitiedoston sijasta. Tähän tarkoitukseen testeissä on käytetty luokkaa `FakePracticeRepository`.
 
-Luokkaa `GoalService` testataan [TestGoalService]()-luokalla. Kuten edellä, `GoalService`-oliolle on injektoitu riippuvuutena valekomponentti; muistiin tallentava `FakeGoalRepository`-olio.
+Luokkaa `GoalService` testataan [TestGoalService](https://github.com/Ronttikasa/treenipaivakirja/blob/master/src/tests/services/goal_service_test.py)-luokalla. Kuten edellä, `GoalService`-oliolle on injektoitu riippuvuutena valekomponentti; muistiin tallentava `FakeGoalRepository`-olio.
 
-Luokkaa `StatsService` testataan [TestStatsService]()-testiluokalla. Myös tämän luokan testauksessa käytetään valekomponenttina luokan `FakePracticeRepository` oliota.
+Luokkaa `StatsService` testataan [TestStatsService](https://github.com/Ronttikasa/treenipaivakirja/blob/master/src/tests/services/stats_service_test.py)-testiluokalla. Myös tämän luokan testauksessa käytetään valekomponenttina luokan `FakePracticeRepository` oliota.
 
 ### Repositorio-luokat
 
-Repositorio-luokkien `PracticeRepository` ja `GoalRepository` testauksessa käytetään pelkästään testeissä käytössä olevia tiedostoja, joiden nimet voidaan konfiguroida *.env.test*-tiedostossa. `PracticeRepository`-luokkaa testataan testiluokalla [TestPracticeRepository]() ja `GoalRepository`-luokkaa testiluokalla [TestGoalRepository]().
+Repositorio-luokkien `PracticeRepository` ja `GoalRepository` testauksessa käytetään pelkästään testeissä käytössä olevia tiedostoja, joiden nimet voidaan konfiguroida *.env.test*-tiedostossa. `PracticeRepository`-luokkaa testataan testiluokalla [TestPracticeRepository](https://github.com/Ronttikasa/treenipaivakirja/blob/master/src/tests/repositories/practice_repository_test.py) ja `GoalRepository`-luokkaa testiluokalla [TestGoalRepository](https://github.com/Ronttikasa/treenipaivakirja/blob/master/src/tests/repositories/goal_repository_test.py).
 
 ### Goal- ja Practice-luokat
 
-Sovellus käsittelee tiedostoon talletettavaa tietoa `Goal`- ja `Practice`-luokkien olioina. Näitä luokkia testataan [TestGoal]()- ja [TestPractice]()-testiluokilla.
+Sovellus käsittelee tiedostoon talletettavaa tietoa `Goal`- ja `Practice`-luokkien olioina. Näitä luokkia testataan [TestGoal](https://github.com/Ronttikasa/treenipaivakirja/blob/master/src/tests/entities/goal_test.py)- ja [TestPractice](https://github.com/Ronttikasa/treenipaivakirja/blob/master/src/tests/entities/practice_test.py)-testiluokilla.
 
 ### Testauskattavuus
 
